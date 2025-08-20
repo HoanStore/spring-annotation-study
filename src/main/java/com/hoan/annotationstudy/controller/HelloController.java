@@ -16,4 +16,9 @@ public class HelloController {
     public String beanExample() {
         return myMessage;
     }
+
+    @GetMapping("/test")
+    public String test() {
+        throw new RuntimeException("테스트 예외 발생!");
+    }
 }
